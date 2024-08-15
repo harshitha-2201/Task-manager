@@ -25,16 +25,16 @@ It also includes user authentication to manage tasks on a per-user basis.
    git clone <repository-url>
 ### Install dependencies for both frontend and backend:
 
--cd client
+- cd client
 - npm install
 - cd server
 - npm init -y
 
 ### Configuration
--REACT_APP_API_URL=http://localhost:3001/api
+- REACT_APP_API_URL=http://localhost:3001/api
 
 # Create a .env file in the backend directory and add the following environment variables:
--MONGO_URI=mongodb://localhost:27017/your-database-name
--JWT_SECRET=your_jwt_secret
+- MONGO_URI=mongodb://localhost:27017/your-database-name
+- JWT_SECRET=your_jwt_secret
 
 ### Running the Application
