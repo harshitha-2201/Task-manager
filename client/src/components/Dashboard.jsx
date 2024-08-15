@@ -19,7 +19,7 @@ const Dashboard = () => {
         return;
       }
   
-      const response = await axios.get('http://localhost:3001/api/tasks', {
+      const response = await axios.get('https://task-manager-px9u.onrender.com', {
         headers: { Authorization: `Bearer ${token}` }
       });
       console.log('Fetched tasks:', response.data); 
@@ -37,7 +37,7 @@ const Dashboard = () => {
         return;
       }
 
-      await axios.post('http://localhost:3001/api/add', newTask, {
+      await axios.post('https://task-manager-px9u.onrender.com', newTask, {
         headers: { Authorization: `Bearer ${token}` }
       });
       fetchTasks();
@@ -54,7 +54,7 @@ const Dashboard = () => {
             return;
         }
 
-        await axios.patch(`http://localhost:3001/api/update/${updatedTask._id}`, updatedTask, {
+        await axios.patch(`https://task-manager-px9u.onrender.com`, updatedTask, {
             headers: { Authorization: `Bearer ${token}` }
         });
 
@@ -73,7 +73,7 @@ const Dashboard = () => {
         return;
       }
   
-      await axios.delete(`http://localhost:3001/api/delete/${taskId}`, {
+      await axios.delete(`https://task-manager-px9u.onrender.com`, {
         headers: { Authorization: `Bearer ${token}` }
       });
       fetchTasks();
